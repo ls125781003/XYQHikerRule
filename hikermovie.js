@@ -3778,7 +3778,7 @@ function omlazy() {
             } else if (/play\.hhplayer/.test(src)) {
                 var psurl = 'https://play.hhplayer.com/hhjx/api.php'
             }
-            var cc = pdfh(request(src, {}), 'body&&script,0&&Html').split('var act')[0];
+            var cc = 'function OKOK'+pdfh(request(src, {}), 'body&&script,0&&Html').split('var act')[0].split('function OKOK')[1];
             cc = cc.replace('atob', 'base64Decode').replace(/const/g, 'let');
             eval(cc);
             var cs = 'url=' + url + '&t=' + t + '&key=' + key + '&act=0&play=1';
